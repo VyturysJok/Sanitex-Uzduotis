@@ -421,16 +421,21 @@ namespace Sanitex_Uzduotis
         {
             if (viewInPercentage == true)
             {
+
                 for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
                 {
-                    for (int j = 0; j < dataGridView2.Columns.Count - 1; j++)
+                    int total = 0;
+                    for (int j = 0; j < dataGridView2.Columns.Count - 2; j++)
                     {
                         var hours = dataGridView2[j + 1, i].Value != null ? dataGridView2[j + 1, i].Value.ToString() : null;
 
                         hours = hours != null && hours.Length != 1 ? hours.Substring(0, hours.Length - 1) : "0";
 
+                        total += (int)Math.Round((double)System.Convert.ToInt32(hours) / 168 * 100);
+
                         dataGridView2[j + 1, i].Value = (int)Math.Round((double)System.Convert.ToInt32(hours) / 168 * 100) + "%";
                     }
+                    dataGridView2[dataGridView2.Columns.Count - 1, i].Value = total + "%";
                 }
             }
         }
@@ -439,16 +444,21 @@ namespace Sanitex_Uzduotis
         {
             if (viewInPercentage != true)
             {
+
                 for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
                 {
-                    for (int j = 0; j < dataGridView2.Columns.Count - 1; j++)
+                    int total = 0;
+                    for (int j = 0; j < dataGridView2.Columns.Count - 2; j++)
                     {
                         var hours = dataGridView2[j + 1, i].Value != null ? dataGridView2[j + 1, i].Value.ToString() : null;
 
                         hours = hours != null && hours.Length != 1 ? hours.Substring(0, hours.Length - 1) : "0";
 
+                        total += (int)Math.Round((double)System.Convert.ToInt32(hours) * 1.68);
+
                         dataGridView2[j + 1, i].Value = (int)Math.Round((double)System.Convert.ToInt32(hours) * 1.68) + "h";
                     }
+                    dataGridView2[dataGridView2.Columns.Count - 1, i].Value = total + "h";
                 }
             }
         }
