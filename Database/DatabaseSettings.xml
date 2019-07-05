@@ -3,5 +3,5 @@
   <ServerVersion>Sql2017</ServerVersion>
   <ServerName>GYJ_1\SQLEXPRESS</ServerName>
   <DatabaseName>Sanitex</DatabaseName>
-  <DatabaseInformation Version="1" />
+  <DatabaseInformation Version="2" />
 </DatabaseSettings>
