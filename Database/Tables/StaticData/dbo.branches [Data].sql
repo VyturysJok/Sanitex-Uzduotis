@@ -1,0 +1,6 @@
+INSERT [dbo].[branches] ([branchId], [branchname]) VALUES (0, N'branch1')
+INSERT [dbo].[branches] ([branchId], [branchname]) VALUES (1, N'branch2')
+INSERT [dbo].[branches] ([branchId], [branchname]) VALUES (2, N'branch3')
+INSERT [dbo].[branches] ([branchId], [branchname]) VALUES (3, N'branch4')
+INSERT [dbo].[branches] ([branchId], [branchname]) VALUES (4, N'branch5')
+INSERT [dbo].[branches] ([branchId], [branchname]) VALUES (5, N'branch6')
